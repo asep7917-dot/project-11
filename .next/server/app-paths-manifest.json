@@ -1,6 +1,7 @@
 {
-  "/identitas/page": "app/identitas/page.js",
-  "/nilai-formatif/page": "app/nilai-formatif/page.js",
   "/data-siswa/page": "app/data-siswa/page.js",
-  "/nilai-sumatif/page": "app/nilai-sumatif/page.js"
+  "/nilai-formatif/page": "app/nilai-formatif/page.js",
+  "/jadwal/page": "app/jadwal/page.js",
+  "/absensi/page": "app/absensi/page.js",
+  "/jurnal-harian/page": "app/jurnal-harian/page.js"
 }

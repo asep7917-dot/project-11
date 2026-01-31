@@ -8,6 +8,9 @@ import {
     Settings,
     ClipboardList,
     FileText,
+    Calendar,
+    UserCheck,
+    BookOpen,
     ChevronRight
 } from 'lucide-react';
 
@@ -35,6 +38,24 @@ const menuItems = [
         href: '/nilai-sumatif',
         icon: FileText,
         description: 'Penilaian akhir (SLM & SAS)'
+    },
+    {
+        title: 'Jadwal Pelajaran',
+        href: '/jadwal',
+        icon: Calendar,
+        description: 'Jadwal mingguan SD'
+    },
+    {
+        title: 'Jurnal Harian',
+        href: '/jurnal-harian',
+        icon: BookOpen,
+        description: 'Catatan pembelajaran'
+    },
+    {
+        title: 'Menghitung Absen Sendiri',
+        href: '/absensi',
+        icon: UserCheck,
+        description: 'Rekap kehadiran guru'
     }
 ];
 

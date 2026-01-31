@@ -102,9 +102,9 @@ function NilaiSumatifContent() {
                             <td>{identitas.namaGuru || '-'}</td>
                         </tr>
                         <tr>
-                            <td><strong>KKM</strong></td>
+                            <td><strong>KKTP</strong></td>
                             <td>:</td>
-                            <td>{identitas.kkm}</td>
+                            <td>{identitas.kktp}</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -120,7 +120,7 @@ function NilaiSumatifContent() {
             </div>
 
             <div className="info-box no-print" style={{ marginBottom: '1rem' }}>
-                <p>📊 <strong>Pembobotan:</strong> SLM = 60% | SAS = 40% | KKM = {identitas.kkm}</p>
+                <p>📊 <strong>Pembobotan:</strong> SLM = 60% | SAS = 40% | KKTP = {identitas.kktp}</p>
             </div>
 
             <div className="card">
@@ -149,7 +149,7 @@ function NilaiSumatifContent() {
                         <tbody>
                             {siswaList.map((siswa, index) => {
                                 const ds = dataSumatif.find(d => d.siswaId === siswa.id);
-                                const isTuntas = ds && ds.nilaiAkhir >= identitas.kkm;
+                                const isTuntas = ds && ds.nilaiAkhir >= identitas.kktp;
 
                                 return (
                                     <tr key={siswa.id}>
@@ -272,13 +272,13 @@ function NilaiSumatifContent() {
                 <div className="print-keterangan-list">
                     <span><strong>SLM</strong> = Sumatif Lingkup Materi (60%)</span>
                     <span><strong>SAS</strong> = Sumatif Akhir Semester (40%)</span>
-                    <span><strong>KKM</strong> = {identitas.kkm}</span>
+                    <span><strong>KKTP</strong> = {identitas.kktp}</span>
                 </div>
             </div>
 
             {/* Print Signature */}
             <div className="print-signature">
-                <p>{identitas.alamatSekolah || identitas.namaSekolah || '.....................'}, {formatTanggal()}</p>
+                <p>{identitas.alamatSekolah || identitas.namaSekolah || '.....................'}, {formatTanggal(identitas.tanggal)}</p>
                 <p style={{ marginTop: '8pt' }}>Guru Kelas,</p>
                 <div className="signature-space"></div>
                 <div className="signature-box">

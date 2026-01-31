@@ -35,7 +35,7 @@ export function exportToExcel(
     rows.push(['Tahun Ajaran', ':', identitas.tahunAjaran || '-']);
     rows.push(['Guru Pengajar', ':', identitas.namaGuru || '-']);
     rows.push(['NIP', ':', identitas.nipGuru || '-']);
-    rows.push(['KKM', ':', String(identitas.kkm)]);
+    rows.push(['KKTP', ':', String(identitas.kktp)]);
     rows.push(['']);
 
     // === HEADER TABEL ===
@@ -82,7 +82,7 @@ export function exportToExcel(
     const nilaiValid = dataSumatif.map(ds => ds.nilaiAkhir).filter(n => n > 0);
     if (nilaiValid.length > 0) {
         const rataRata = nilaiValid.reduce((a, b) => a + b, 0) / nilaiValid.length;
-        const tuntas = nilaiValid.filter(n => n >= identitas.kkm).length;
+        const tuntas = nilaiValid.filter(n => n >= identitas.kktp).length;
         const belumTuntas = nilaiValid.length - tuntas;
 
         rows.push(['STATISTIK']);
@@ -90,7 +90,7 @@ export function exportToExcel(
         rows.push(['Nilai Tertinggi', ':', String(Math.max(...nilaiValid))]);
         rows.push(['Nilai Terendah', ':', String(Math.min(...nilaiValid))]);
         rows.push(['Jumlah Siswa', ':', String(dataSiswa.length)]);
-        rows.push(['Tuntas (≥ KKM)', ':', `${tuntas} siswa`]);
+        rows.push(['Tuntas (≥ KKTP)', ':', `${tuntas} siswa`]);
         rows.push(['Belum Tuntas', ':', `${belumTuntas} siswa`]);
         rows.push(['Persentase Ketuntasan', ':', `${((tuntas / nilaiValid.length) * 100).toFixed(1)}%`]);
     }

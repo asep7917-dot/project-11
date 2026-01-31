@@ -194,7 +194,7 @@ function NilaiFormatifContent() {
 
             {/* Print Signature */}
             <div className="print-signature">
-                <p>{identitas.alamatSekolah || identitas.namaSekolah || '.....................'}, {formatTanggal()}</p>
+                <p>{identitas.alamatSekolah || identitas.namaSekolah || '.....................'}, {formatTanggal(identitas.tanggal)}</p>
                 <p style={{ marginTop: '8pt' }}>Guru Kelas,</p>
                 <div className="signature-space"></div>
                 <div className="signature-box">

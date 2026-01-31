@@ -55,9 +55,10 @@ const defaultIdentitas: FormIdentitas = {
     tahunAjaran: '2024/2025',
     namaGuru: '',
     nipGuru: '',
-    kkm: 70,
+    kktp: 70,
     jumlahLM: 4,
-    jumlahTP: 6
+    jumlahTP: 6,
+    tanggal: new Date().toISOString().split('T')[0]
 };
 
 export function NilaiProvider({ children }: { children: ReactNode }) {

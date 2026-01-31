@@ -157,13 +157,13 @@ function IdentitasContent() {
                         />
                     </div>
                     <div className="form-group">
-                        <label>KKM</label>
+                        <label>KKTP</label>
                         <input
                             type="number"
                             min="0"
                             max="100"
-                            value={identitas.kkm}
-                            onChange={(e) => handleChange('kkm', parseInt(e.target.value) || 0)}
+                            value={identitas.kktp}
+                            onChange={(e) => handleChange('kktp', parseInt(e.target.value) || 0)}
                         />
                     </div>
                     <div className="form-group">
@@ -187,6 +187,14 @@ function IdentitasContent() {
                                 <option key={num} value={num}>{num} Lingkup Materi</option>
                             ))}
                         </select>
+                    </div>
+                    <div className="form-group">
+                        <label>Tanggal Dokumen</label>
+                        <input
+                            type="date"
+                            value={identitas.tanggal}
+                            onChange={(e) => handleChange('tanggal', e.target.value)}
+                        />
                     </div>
                 </div>
             </div>

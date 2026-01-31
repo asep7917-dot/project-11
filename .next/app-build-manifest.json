@@ -30,6 +30,21 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/nilai-sumatif/page.js"
+    ],
+    "/jadwal/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/jadwal/page.js"
+    ],
+    "/absensi/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/absensi/page.js"
+    ],
+    "/jurnal-harian/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/jurnal-harian/page.js"
     ]
   }
 }
